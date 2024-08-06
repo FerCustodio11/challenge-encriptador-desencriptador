@@ -1,0 +1,43 @@
+body {
+    background-color: #F3F5FC;
+}
+/*HEADER*/
+header{
+    background-color: rgb(197, 213, 115);
+}
+.header {
+    width: 100%;
+    margin: auto;
+}
+.header__logo {
+    margin-top: 40px;
+    background-color: aquamarine;
+}
+
+/* MAIN*/
+.main {
+    background-color: rgb(168, 90, 242);
+    width: 85%;
+    margin: auto 40px auto auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: calc(100vh - 91px - 72px);
+    align-items: end;
+}
+.main__izquierda {
+    background-color: rgb(165, 236, 236);
+    height: 670px;
+}
+
+
+
+
+.main__derecha {
+    background-color: rgb(227, 147, 118);
+    height: calc(100% + 48px);
+}
+@media screen and (max-width: 770px) {
+    .main{
+        grid-template-columns: 1fr;
+    }
+}
