@@ -29,7 +29,8 @@ botonEncriptar.addEventListener("click",()=>{
         };
         return newText;
     }
-    console.log(encriptar(texto))
+    const textoEncriptado = encriptar(texto)
+    mensajeFinal.innerHTML = textoEncriptado
 })
 
 
