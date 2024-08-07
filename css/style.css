@@ -3,16 +3,27 @@
     --color-blue: #0A3871;
     --color-gris: #D8DFE8;
     --color-gray: #495057;
-    --fuente-inter: "Inter", sans-serif;
 }
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+
 body {
     background-color: #F3F5FC;
-    font-family: var(--fuente-inter);
+}
+button{
+    cursor: pointer;
 }
 /*HEADER*/
 .header {
     width: 100%;
-    margin: auto;
 }
 .header__logo {
     margin-top: 40px;
@@ -38,15 +49,16 @@ body {
 .izq__texto{
     width: 80%;
     font-size: 32px;
-    font-family: "Inter", sans-serif;
     font-weight: 400;
     color: var(--color-blue);
     resize: none;
     background: none;
     border: none;
     outline: none;
+    height: 288px;
 }
-.izq_texto::placeholder{
+
+.izq__texto::placeholder{
     color: var(--color-blue);
 }
 .izq__info {
@@ -85,7 +97,7 @@ body {
 
 
 /*DERECHA*/
-.main__derecha {
+.derecha {
     background-color: white;
     height: calc(100% + 48px);
     border-radius: 32px;
@@ -93,13 +105,14 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 32px;
+    gap: 12px;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     box-shadow: 0px 24px 32px -8px #00000014;
 
 }
-.ajustar{
+.derecha.ajustar{
     justify-content: space-between;
 
 }
@@ -107,16 +120,26 @@ body {
     width: 100%;
 }
 .mensaje__final {
-    font-family: var(--fuente-inter);
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
     font-size: 24px;
     text-align: center;
     font-weight: 700;
     line-height: 28.8px;
-
+}
+.mensaje__final::placeholder{
+    color: var(--color-gray);
+    font-weight: 700;
+}
+.mensaje__final.ajustar{
+    text-align: left;
+    font-weight: 400;
+    height: 80%;
 }
 .derecha__info {
     color: var(--color-gray);
-    font-family: var(--fuente-inter);
     font-size: 16px;
     text-align: center;
     font-weight: 400;
@@ -155,7 +178,7 @@ body {
     .btn__encriptar,.btn__desencriptar{
         width: 45%;
     }
-    .main__derecha{
+    .derecha{
         height: 100%;
     }.muneco{
         display: none;
