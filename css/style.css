@@ -2,7 +2,7 @@
 :root {
     --color-blue: #0A3871;
     --color-gris: #D8DFE8;
-    --color-gray: #495057;
+    --color-gray: #343A40;
     --color-lightBlue: #F3F5FC;
     --fuente-inter: "Inter", sans-serif;
 }
@@ -245,7 +245,7 @@ footer{
 @media screen and (max-width: 769px) {
     .main{
         grid-template-columns: 1fr;
-        grid-template-rows: 85% auto;
+        grid-template-rows: 83% auto;
         margin: auto;
     }
     .title {
@@ -255,13 +255,13 @@ footer{
         max-height: 270px;
         font-size: 32px;
     }
-    .info{
+    .min_may{
         font-size: 12px;
     }
-    .right{
-        height: 100%;
+    .ing__txt{
+        font-size: 16px;
     }
-    .right.ajustar{
+    .right{
         height: 100%;
     }
     .muneco{
@@ -269,6 +269,7 @@ footer{
     }
     .mensaje__final{
         font-size: 24px;
+        width: 100%;
     }
     .creador{
         font-size: 14px;
