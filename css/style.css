@@ -18,10 +18,12 @@
 body {
     background-color: #F3F5FC;
 }
-button{
+button {
     cursor: pointer;
 }
+
 /*HEADER*/
+
 header {
     width: 100%;
 }
@@ -31,7 +33,7 @@ header {
     align-content: flex-end;
     height: 80px;
 }
-.header__div{
+.header__div {
     width: 90%;
     height: auto;
     margin: auto;
@@ -47,72 +49,90 @@ header {
 
 /* MAIN*/
 .main {
-    width: 85%;
+    width: 90%;
     margin: auto 40px auto auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    min-height: calc(100vh - 91px - 72px);
     align-items: end;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 2.5fr 1fr;
+    min-height: calc(100vh - 91px - 72px);
 }
 
 /* izquierda */
-.main__izq {
-    height: 85%;
+
+.left {
+    width: 100%;
+    height: 92%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.izq__texto{
-    width: 80%;
+.left__texarea {
+    width: 100%;
+    max-height: 350px;
+    min-height: 50px;
     font-size: 32px;
-    font-weight: 400;
     color: var(--color-blue);
     resize: none;
-    background: none;
+    background: transparent;
     border: none;
     outline: none;
     height: 288px;
 }
-
-.izq__texto::placeholder{
+.left__texarea::placeholder{
     color: var(--color-blue);
 }
-.izq__info {
-    color: var(--color-gray);
-    font-size: 12px;
+.left__down {
+    min-height: 80px;
 }
-.izq__botones{
+.left__info {
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    color: var(--color-gray);
+    font-size: 16px;
+}
+.left__button {
     display: flex;
-    gap: 24PX;
-    margin-top: 16PX;
+    justify-content: space-evenly;
+    padding: .8rem;
+    gap: .8rem;
     flex-wrap: wrap;
 }
-.btn__encriptar{
-    border: 1px solid var(--color-blue);
-    cursor: pointer;
+
+.btn__encriptar,
+.btn__desencriptar,
+.btn__copiar {
+    width: 45%;
     max-width: 328px;
-    width: 40%;
+    min-width: 160pz;
     height: 67px;
+    font-size: 16px;
     border-radius: 24px;
-    background-color: var(--color-blue);
+    border: none;
+    outline: 1px solid var(--color-blue);
+    background: var(--color-blue);
     color: white;
-    font-size: 16px;
-}
-.btn__desencriptar{
-    border: 1px solid var(--color-blue);
-    cursor: pointer;
-    max-width: 328px;
-    width: 40%;
-    height: 67px;
-    border-radius: 24px;
-    background-color:var(--color-gris);
-    color: var(--color-blue);
-    font-size: 16px;
 }
 
+.btn__desencriptar{
+    background-color: var(--color-blue);
+    color: white;
+}
+.btn__copiar {
+    width: 100%;
+    background: none;
+    color: var(--color-blue);
+    min-width: 100px;
+}
+.btn__ocultar {
+    display: none;
+}
 
 
 /*DERECHA*/
+
 .derecha {
     background-color: white;
     height: calc(100% + 48px);
@@ -174,10 +194,6 @@ header {
     border-radius: 24px;
     font-size: 16px;
 }
-.oculto{
-    display: none;
-}
-
 
 
 

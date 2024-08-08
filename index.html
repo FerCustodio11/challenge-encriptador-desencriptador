@@ -20,12 +20,14 @@
     </header>
     <main>
         <div class="main">
-            <section class="main__izq">
-                <textarea id="ingreseTexto" class="izq__texto" placeholder="Ingrese el texto aqui"></textarea>
-                <div class="izq__footer">
-                    <img src="./imagenes/alerta.png" alt="alerta">
-                    <span class="izq__info">Solo letras minúsculas y sin acentos</span>
-                    <div class="izq__botones">
+            <section class="left">
+                <textarea id="ingreseTexto" class="left__texarea" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="left__down">
+                    <span class="left__info">
+                        <img src="./imagenes/alerta.png" alt="alerta">
+                        Solo letras minúsculas y sin acentos
+                    </span>
+                    <div class="left__button">
                         <button id="botonEncriptar" class="btn__encriptar">Encriptar</button>
                         <button id="botonDesencriptar" class="btn__desencriptar">Desencriptar</button>
                     </div>
@@ -35,7 +37,7 @@
                 <img id="munecoId" class="muneco" src="./imagenes/Muñeco.png" alt="muneco">
                 <textarea id="mensajeFinal" class="mensaje__final" placeholder="Ningun mensaje fue encortrado"></textarea>
                 <p id="derechaInfo" class="derecha__info">Ingrese el texto que desee encriptar o desencriptar</p>
-                <button id="botonCopiar" class="btn__copiar oculto">Copiar</button>
+                <button id="botonCopiar" class="btn__copiar btn__ocultar">Copiar</button>
             </section>
         </div>
     </main>
