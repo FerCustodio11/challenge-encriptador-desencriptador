@@ -102,8 +102,8 @@ header {
 }
 .left__texarea {
     width: 100%;
-    max-height: 350px;
-    min-height: 50px;
+    height: auto;
+    min-height: 250px;
     background: transparent;
     resize: none;
     border: none;
@@ -126,6 +126,11 @@ header {
     color: var(--color-gray);
     font-size: 16px;
 }
+
+.min_may{
+    font-size: 12px;
+}
+
 .left__button {
     display: flex;
     justify-content: space-evenly;
@@ -179,7 +184,7 @@ header {
     gap: 32px;
     box-shadow: 0px 24px 32px -8px #00000014;
 }
-.right__ajuste{
+.ajuste{
     justify-content: space-between;
 
 }
@@ -213,6 +218,7 @@ header {
     pointer-events: all;
     text-align: left;
     overflow: auto;
+    font-weight: 400;
 }    
 
 footer{
@@ -228,7 +234,7 @@ footer{
     color: var(--color-gray);
 }
 .creador {
-    font-size: 15px;
+    font-size: 13px;
 }
 .fecha__creacion {
     font-size: 12px;
@@ -239,7 +245,7 @@ footer{
 @media screen and (max-width: 769px) {
     .main{
         grid-template-columns: 1fr;
-        grid-template-rows: 65% auto;
+        grid-template-rows: 85% auto;
         margin: auto;
     }
     .title {
@@ -247,7 +253,7 @@ footer{
     }
     .left__texarea{
         max-height: 270px;
-        font-size: 26px;
+        font-size: 32px;
     }
     .info{
         font-size: 12px;
@@ -262,7 +268,7 @@ footer{
         display: none;
     }
     .mensaje__final{
-        font-size: 18px;
+        font-size: 24px;
     }
     .creador{
         font-size: 14px;
