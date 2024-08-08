@@ -1,4 +1,4 @@
-const ingreseTexto = document.getElementById("ingreseTexto");
+const leftTexarea = document.getElementById("left__texarea");
 const botonEncriptar = document.getElementById("botonEncriptar");
 const botonDesencriptar = document.getElementById("botonDesencriptar");
 const botonCopiar = document.getElementById("botonCopiar");
@@ -26,7 +26,7 @@ let remplazar = [
 
 
 botonEncriptar.addEventListener("click",()=>{
-    const texto = ingreseTexto.value.toLowerCase()
+    const texto = leftTexarea.value.toLowerCase()
     function encriptar(newText) {
         for(let i = 0; i <remplazar.length; i++){
             if (newText.includes(remplazar[i][0])){
@@ -48,26 +48,38 @@ botonEncriptar.addEventListener("click",()=>{
 });
 
 botonDesencriptar.addEventListener("click", () => {
-    const texto = ingreseTexto.value.toLowerCase();
+    const texto = leftTexarea.value.toLowerCase();
     function desencriptar(newText) {
         for (let i = 0; i < remplazar.length; i++){
             if (newText.includes(remplazar [i][1])){
                 newText = newText.replaceAll(remplazar[i][1], remplazar[i][0]);
             };
         };
-        return newText
+        return newText;
     }
     const textoDesencriptado = desencriptar(texto);
 
     mensajeFinal.innerHTML = textoDesencriptado;
 
-})
+});
 
 botonCopiar.addEventListener("click", () => {
     let texto = mensajeFinal;
     texto.select();
     document.execCommand("copy");
     alert("texto copiado");
-})
+});
 
+// ajuste textarea
 
+leftTexarea.addEventListener("change", e =>{
+    leftTexarea.style.height = "auto";
+    let scHeight = e.target.scrollHeigth;
+    leftTexarea.style.height = `${scHeight}px`;
+});
+
+leftTexarea.addEventListener("keyup", e =>{
+    leftTexarea.style.height = "auto";
+    let scHeight = e.target.scrollHeigth;
+    leftTexarea.style.height = `${scHeight}px`;
+});
